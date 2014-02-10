@@ -1,0 +1,5 @@
+#!/bin/bash
+git add .
+git commit -m "Added from Laptop"
+
+git push heroku master
