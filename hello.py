@@ -7,10 +7,8 @@ app = Flask(__name__)
 @app.route('/')
 
 def hello():
-
-	x = 10	
 	
-	return x
+	return "Hello World"
 
 @app.route('/test')
 
