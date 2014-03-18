@@ -1,20 +1,41 @@
 import os
 import json
-from flask import Flask
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
 cal_ID = 0
+tasks = [ {'id':1,'name':u'Brian'} , {'id':2,'name':u'Tully'} ]
 
 @app.route('/')
-def createCal:
+def createCal():
 	cal_ID = cal_ID + 1
 	cal = {'ID':cal_ID}
 	entry_ID = 0
-	return cal_ID
+
+@app.route('/Entry')
+def createEntry(date,desc,start,end,repeat,loc):
+	entry_ID = entry_ID + 1
+	entry = {'ID':entry_ID, 'Date':date, 'Description':desc,
+		'Start Time':start, 'End Time':end, 'Repeats':repeat, 
+		'Location':loc}
+	cal.append({'ID':entry_ID, 'Entry':entry})
+	return jsonify( {'entry':entry})
 	
+@app.route('/Entry/<entry_ID>')
+def editEntry(date,desc,start,end,repeat,loc):
+	entry = {'ID':ID,'Date':date, 'Description':desc,
+		'Start Time':start, 'End time':end, 'Repeats':repeat,
+		'Location':loc}
 
 @app.route('/1')
 def test():
 
 	return "This is a test page!"
+
+@app.route('/tester', methods = ['GET'])
+def get_task():
+	return jsonify({'tasks':tasks})
+
+if __name__ == '__main__':
+	app.run(debug = True)
