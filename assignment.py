@@ -19,7 +19,7 @@ def view_cal(cal_id):
 	for c in cal_List:
 		if c['ID'] == cal_id:
 			return jsonify(c)
-	return "Calendar does not exist\nPlease use POST to create.", 404	
+	return "Calendar does not exist.<br>\nPlease use POST to create.", 404	
 
 @app.errorhandler(404)
 def not_found(error):
@@ -35,7 +35,7 @@ def view_entry(cal_id,entry_id):
 				elif e['ID'] == entry_id:
 					return jsonify(e)
 	
-	return "No Entry found\nPlease use POST to create.", 404
+	return "No Entry found for this calendar.<br>\nPlease use POST to create.", 404
 
 @app.route('/myCalendar/<int:cal_id>/Entry/<int:entry_id>',methods = ['POST'])
 def create_entry(cal_id,entry_id):
