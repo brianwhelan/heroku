@@ -1,12 +1,12 @@
 #!/bin/bash
-curl -i -X POST -d '{}' http://localhost:5000/myCalendar/1
+curl -i -X POST -d '{}' http://immense-fjord-7601.herokuapp.com/myCalendar/1
 
-curl -i -X POST -d '{}' http://localhost:5000/myCalendar/2
+curl -i -X POST -d '{}' http://immense-fjord-7601.herokuapp.com/myCalendar/2
 
-curl -i -H "Content-Type: application/json" -X POST -d '{"title":"Test1"}' http://localhost:5000/myCalendar/1/Entry/1
+curl -i -H "Content-Type: application/json" -X POST -d '{"title":"Test1"}' http://immense-fjord-7601.herokuapp.com/myCalendar/1/Entry/1
 
-curl -i -H "Content-Type: application/json" -X POST -d '{"title":"Test2"}' http://localhost:5000/myCalendar/2/Entry/1
+curl -i -H "Content-Type: application/json" -X POST -d '{"title":"Test2"}' http://immense-fjord-7601.herokuapp.com/myCalendar/2/Entry/1
 
-curl -i -X GET http://localhost:5000/myCalendar/1/Entry/1
+curl -i -X GET http://immense-fjord-7601.herokuapp.com/myCalendar/1/Entry/1
 
-curl -i -X GET http://localhost:5000/myCalendar/2/Entry/1
+curl -i -X GET http://immense-fjord-7601.herokuapp.com/myCalendar/2/Entry/1

@@ -1,6 +1,6 @@
 #!/bin/bash
-curl -i -x POST -d '{}' http://localhost:5000/myCalendar/1
+curl -i -X POST -d '{}' http://immense-fjord-7601.herokuapp.com/myCalendar/1
 
-curl -i -x POST -d '{}' http://localhost:5000/myCalendar/1
+curl -i -X POST -d '{}' http://immense-fjord-7601.herokuapp.com/myCalendar/1
 
-curl -i -x POST -d '{}' http://localhost:5000/myCalendar/2
+curl -i -X POST -d '{}' http://localhost:5000/myCalendar/2
