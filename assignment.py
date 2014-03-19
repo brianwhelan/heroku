@@ -77,7 +77,17 @@ def edit_entry(cal_id,entry_id):
 				if e['ID'] == entry_id:
 					if 'title' in request.json:
 						e['title'] = request.json.get('title')
-	return "Entry Modified", 200				
+					if 'description' in request.json:
+						e['description'] = request.json.get('description')
+					if 'start' in request.json:
+						e['start'] = request.json.got('start') 
+					if 'end' in request.json:
+						e['end'] = request.json.got('end')
+					if 'location' in request.json:
+						e['location'] = request.json.got('location')
+					if 'repeat' in request.json:
+						e['repeat'] = request.json.got('repeat')
+	return "Entry Modified", 200		 		
 
 @app.route('/myCalendar/<int:cal_id>/Entry/<int:entry_id>',methods = ['DELETE'])
 def delete_entry(cal_id,entry_id):
