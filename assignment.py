@@ -30,10 +30,12 @@ def view_entry(cal_id,entry_id):
 	for c in cal_List:
 		if c['ID'] == cal_id:
 			for e in c['Entries']:
-				if e['ID'] == entry_id:
+				if e == {}:
+					c['Entries'].remove({})
+				elif e['ID'] == entry_id:
 					return jsonify(e)
 	
-	return "its broken"
+	return "No Entry found\nPlease use POST to create.", 404
 
 @app.route('/myCalendar/<int:cal_id>/Entry/<int:entry_id>',methods = ['POST'])
 def create_entry(cal_id,entry_id):
@@ -78,8 +80,18 @@ def delete_entry(cal_id,entry_id):
 
 	return "Entry does not exist in this Calendar\n", 404
 
+@app.route('/myCalendar/<int:cal_id>',methods = ['DELETE'])
+def delete_cal(cal_id):
+	for c in cal_List:
+		if c['ID'] == cal_id:
+			c.clear()
+			cal_List.remove({})
+			return "Successfully deleted this calendar\n", 201
 
-@app.route('/showCal', methods = ['GET'])
+	return "Entry does not exist in this Calendar\n", 404
+
+
+@app.route('/', methods = ['GET'])
 def getCal():
 	return jsonify( { 'cal_List': cal_List } ), 201
 
