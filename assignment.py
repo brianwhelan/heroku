@@ -95,6 +95,15 @@ def delete_cal(cal_id):
 def getCal():
 	return jsonify( { 'cal_List': cal_List } ), 201
 
+@app.route('/', methods = ['DELETE'])
+def delAll():
+	for c in cal_List:
+		c.clear()
+	for c in cal_List:
+		cal_List.remove({})
+	cal_List.remove({})
+	return "All Data Deleted", 200
+
 
 
 if __name__ == '__main__':
