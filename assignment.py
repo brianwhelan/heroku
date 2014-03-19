@@ -118,6 +118,9 @@ def getCal():
 
 @app.route('/', methods = ['DELETE'])
 def delAll():
+	if cal_List == []:
+		return "Cant Delete empty calandar.<br>\n"
+ 
 	for c in cal_List:
 		c.clear()
 	for c in cal_List:

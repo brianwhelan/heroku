@@ -1,0 +1,139 @@
+HTTP/1.1 201 CREATED
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 20:03:14 GMT
+Server: gunicorn/18.0
+Content-Length: 17
+Connection: keep-alive
+
+Calendar Created
+HTTP/1.1 201 CREATED
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 20:03:14 GMT
+Server: gunicorn/18.0
+Content-Length: 8
+Connection: keep-alive
+
+Success
+HTTP/1.1 201 CREATED
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 20:03:14 GMT
+Server: gunicorn/18.0
+Content-Length: 17
+Connection: keep-alive
+
+Calendar Created
+HTTP/1.1 201 CREATED
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 20:03:15 GMT
+Server: gunicorn/18.0
+Content-Length: 8
+Connection: keep-alive
+
+Success
+HTTP/1.1 201 CREATED
+Content-Type: application/json
+Date: Wed, 19 Mar 2014 20:03:15 GMT
+Server: gunicorn/18.0
+Content-Length: 525
+Connection: keep-alive
+
+{
+  "cal_List": [
+    {
+      "Entries": [
+        {
+          "ID": 1, 
+          "description": "", 
+          "end": "", 
+          "location": "", 
+          "repeat": "", 
+          "start": "", 
+          "title": "Test1"
+        }
+      ], 
+      "ID": 1
+    }, 
+    {
+      "Entries": [
+        {
+          "ID": 1, 
+          "description": "", 
+          "end": "", 
+          "location": "", 
+          "repeat": "", 
+          "start": "", 
+          "title": "Test1"
+        }
+      ], 
+      "ID": 2
+    }
+  ]
+}HTTP/1.1 201 CREATED
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 20:03:15 GMT
+Server: gunicorn/18.0
+Content-Length: 35
+Connection: keep-alive
+
+Successfully deleted this calendar
+HTTP/1.1 201 CREATED
+Content-Type: application/json
+Date: Wed, 19 Mar 2014 20:03:15 GMT
+Server: gunicorn/18.0
+Content-Length: 273
+Connection: keep-alive
+
+{
+  "cal_List": [
+    {
+      "Entries": [
+        {
+          "ID": 1, 
+          "description": "", 
+          "end": "", 
+          "location": "", 
+          "repeat": "", 
+          "start": "", 
+          "title": "Test1"
+        }
+      ], 
+      "ID": 2
+    }
+  ]
+}HTTP/1.1 201 CREATED
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 20:03:16 GMT
+Server: gunicorn/18.0
+Content-Length: 17
+Connection: keep-alive
+
+Calendar Created
+HTTP/1.1 201 CREATED
+Content-Type: application/json
+Date: Wed, 19 Mar 2014 20:03:16 GMT
+Server: gunicorn/18.0
+Content-Length: 323
+Connection: keep-alive
+
+{
+  "cal_List": [
+    {
+      "Entries": [
+        {
+          "ID": 1, 
+          "description": "", 
+          "end": "", 
+          "location": "", 
+          "repeat": "", 
+          "start": "", 
+          "title": "Test1"
+        }
+      ], 
+      "ID": 2
+    }, 
+    {
+      "Entries": [], 
+      "ID": 1
+    }
+  ]
+}

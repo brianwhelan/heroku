@@ -1,0 +1,74 @@
+HTTP/1.1 201 CREATED
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 20:04:36 GMT
+Server: gunicorn/18.0
+Content-Length: 17
+Connection: keep-alive
+
+Calendar Created
+HTTP/1.1 404 NOT FOUND
+Content-Type: application/json
+Date: Wed, 19 Mar 2014 20:04:36 GMT
+Server: gunicorn/18.0
+Content-Length: 26
+Connection: keep-alive
+
+{
+  "error": "Not found"
+}HTTP/1.1 201 CREATED
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 20:04:37 GMT
+Server: gunicorn/18.0
+Content-Length: 8
+Connection: keep-alive
+
+Success
+HTTP/1.1 200 OK
+Content-Type: application/json
+Date: Wed, 19 Mar 2014 20:04:37 GMT
+Server: gunicorn/18.0
+Content-Length: 193
+Connection: keep-alive
+
+{
+  "Entries": [
+    {
+      "ID": 2, 
+      "description": "", 
+      "end": "", 
+      "location": "", 
+      "repeat": "", 
+      "start": "", 
+      "title": "Test2"
+    }
+  ], 
+  "ID": 1
+}HTTP/1.1 404 NOT FOUND
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 20:04:37 GMT
+Server: gunicorn/18.0
+Content-Length: 38
+Connection: keep-alive
+
+Entry does not exist in this Calendar
+HTTP/1.1 200 OK
+Content-Type: application/json
+Date: Wed, 19 Mar 2014 20:04:38 GMT
+Server: gunicorn/18.0
+Content-Length: 193
+Connection: keep-alive
+
+{
+  "Entries": [
+    {
+      "ID": 2, 
+      "description": "", 
+      "end": "", 
+      "location": "", 
+      "repeat": "", 
+      "start": "", 
+      "title": "Test2"
+    }
+  ], 
+  "ID": 1
+}

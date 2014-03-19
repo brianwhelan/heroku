@@ -1,0 +1,32 @@
+HTTP/1.1 201 CREATED
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 20:09:50 GMT
+Server: gunicorn/18.0
+Content-Length: 17
+Connection: keep-alive
+
+Calendar Created
+HTTP/1.1 201 CREATED
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 20:09:50 GMT
+Server: gunicorn/18.0
+Content-Length: 17
+Connection: keep-alive
+
+Calendar Created
+HTTP/1.1 201 CREATED
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 20:09:50 GMT
+Server: gunicorn/18.0
+Content-Length: 8
+Connection: keep-alive
+
+Success
+HTTP/1.1 201 CREATED
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 20:09:51 GMT
+Server: gunicorn/18.0
+Content-Length: 8
+Connection: keep-alive
+
+Success

@@ -3,7 +3,9 @@ curl -i -X POST -d '{}' http://immense-fjord-7601.herokuapp.com/myCalendar/1
 
 curl -i -X POST -d '{}' http://immense-fjord-7601.herokuapp.com/myCalendar/2
 
-curl -i -X http://immense-fjord-7601.herokuapp.com/myCalendar/1
+curl -i -X GET http://immense-fjord-7601.herokuapp.com/myCalendar/1
+
+curl -i -X GET http://immense-fjord-7601.herokuapp.com/myCalendar/2
 
 curl -i -X GET http://immense-fjord-7601.herokuapp.com/myCalendar/3
 

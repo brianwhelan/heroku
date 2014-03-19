@@ -1,0 +1,78 @@
+HTTP/1.1 201 CREATED
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 19:45:59 GMT
+Server: gunicorn/18.0
+Content-Length: 17
+Connection: keep-alive
+
+Calendar Created
+HTTP/1.1 201 CREATED
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 19:45:59 GMT
+Server: gunicorn/18.0
+Content-Length: 17
+Connection: keep-alive
+
+Calendar Created
+HTTP/1.1 201 CREATED
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 19:45:59 GMT
+Server: gunicorn/18.0
+Content-Length: 8
+Connection: keep-alive
+
+Success
+HTTP/1.1 201 CREATED
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 19:46:00 GMT
+Server: gunicorn/18.0
+Content-Length: 8
+Connection: keep-alive
+
+Success
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Date: Wed, 19 Mar 2014 19:46:00 GMT
+Server: gunicorn/18.0
+Content-Length: 14
+Connection: keep-alive
+
+Entry ModifiedHTTP/1.1 201 CREATED
+Content-Type: application/json
+Date: Wed, 19 Mar 2014 19:46:00 GMT
+Server: gunicorn/18.0
+Content-Length: 528
+Connection: keep-alive
+
+{
+  "cal_List": [
+    {
+      "Entries": [
+        {
+          "ID": 1, 
+          "description": "", 
+          "end": "", 
+          "location": "", 
+          "repeat": "", 
+          "start": "", 
+          "title": "modified"
+        }
+      ], 
+      "ID": 1
+    }, 
+    {
+      "Entries": [
+        {
+          "ID": 1, 
+          "description": "", 
+          "end": "", 
+          "location": "", 
+          "repeat": "", 
+          "start": "", 
+          "title": "Test2"
+        }
+      ], 
+      "ID": 2
+    }
+  ]
+}
