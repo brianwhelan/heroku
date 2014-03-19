@@ -1,4 +1,4 @@
-heroku
+heroku app
 ======
 Sumitter 1 Name: Brian Whelan , Student Number: C10319509
 
@@ -6,7 +6,11 @@ Sumitter 2 Name: Andrew Tully , Student Number: C11347281
 
 App url: http://immense-fjord-7601.herokuapp.com/
 
-Testing Plans are below 
+Testing Plans are below, please follow them using the test results files.
+
+The tests are run from executable files with the name "test----"
+
+The proof of thses tests are in "test----.txt" files
 
 Test name: Create Calendar
 
@@ -30,6 +34,8 @@ Test name: Create Calendar
 	●	The third calendar is created because it's ID is unused
 	
 	●	All responses are JSON encoded
+	
+	You will find the results in file "testcalcreate.txt"
 
 
 Test name: View Calendar
@@ -55,6 +61,8 @@ Test name: View Calendar
 	●	Calendars with valid IDs were retrieved individually. JSON encoded response was returned
 	
 	●	When all calendars are retrieved, the two ones which were created in the test are given. JSON encoded
+	
+	You will find the results in file "testcalview.txt"
 
 Test name: Create Entry
 
@@ -78,8 +86,10 @@ Test name: Create Entry
 	●	TestEntry1 was successfully added to the first calendar. User notified by JSON encoded message
 
 	●	TestEntry2 was successfully added to the second character, without causing an ID conflict (they have the same ID, but belong to different calendars). User notified by JSON encoded message
+	
+	You will find the results in file "testEntryCreate.txt"
 
-View Entry
+Test name: View Entry
 
 	Goal: Display the contents of requested entries
 	
@@ -104,8 +114,10 @@ View Entry
 	●	TestEntry1 could be retrieved upon request (JSON encoded)
 	
 	●	TestEntry2 could be retrieved upon request (JSON encoded)
+	
+	You will find the results in file "testEntryView.txt"
 
-Modify Entry
+Test name: Modify Entry
 
 	Goal:Change fields of an entry, and have them saved
 	
@@ -136,8 +148,10 @@ Modify Entry
 	●	Entry was successfully modified. User notified by JSON encoded message
 	
 	●	Entries were successfully displayed. The modified field was different to the original field
+	
+	You will find the results in file "testModifyEntry.txt"
 
-Delete Entry
+Test name: Delete Entry
 
 	Goal:Permanently delete an entry from a field
 	
@@ -168,8 +182,10 @@ Delete Entry
 	●	Entry successfully deleted. User notified by JSON encoded message
 	
 	●	Entries successfully displayed
+	
+	You will find the results in file "testDeleteEntry.txt"
 
-Delete Calendar
+Test name: Delete Calendar
 
 	Goal:Delete a calendar, and ensure it’s entries are not linked to the ID
 	
@@ -204,3 +220,6 @@ Delete Calendar
 	●	New calendar is created with the same ID as deleted calendar. User notified by JSON encoded message
 	
 	●	Calendars are listed. New calendar does not contain any data from the original calendar.
+	
+	You will find the results in file "testDeleteCal.txt"
+	
