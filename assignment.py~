@@ -14,9 +14,26 @@ def create_cal(cal_id):
 	cal_List.append(newCal)
 	return "Calendar Created", 201
 
+@app.route('/myCalendar/<int:cal_id>', methods = ['GET'])
+def view_cal(cal_id):
+	for c in cal_List:
+		if c['ID'] == cal_id:
+			return jsonify(c)
+	return "Calendar does not exist", 404	
+
 @app.errorhandler(404)
 def not_found(error):
 	return make_response(jsonify( {'error': 'Not found'} ), 404)
+
+@app.route('/myCalendar/<int:cal_id>/Entry/<int:entry_id>',methods = ['GET'])
+def view_entry(cal_id,entry_id):
+	for c in cal_List:
+		if c['ID'] == cal_id:
+			for e in c['Entries']:
+				if e['ID'] == entry_id:
+					return jsonify(e)
+	
+	return "its broken"
 
 @app.route('/myCalendar/<int:cal_id>/Entry/<int:entry_id>',methods = ['POST'])
 def create_entry(cal_id,entry_id):
@@ -24,7 +41,7 @@ def create_entry(cal_id,entry_id):
 		abort(400)
 	thisEntry = {
 		'ID': entry_id,
-		'title': request.json['title'],
+	 	'title': request.json['title'],
 		'description': request.json.get('description', ""),
 		'start': request.json.get('start', ""),
 		'end': request.json.get('end', ""),
@@ -57,17 +74,7 @@ def delete_entry(cal_id,entry_id):
 			for e in c['Entries']:
 				if e['ID'] == entry_id:
 					e.clear()
-
-					'''del e['title']
-					del e['end']
-					del e['start']
-					del e['description']
-					del e['location']
-					del e['repeat']
-					e['ID'] = 0'''
-
 					return "Successfully deleted entry\n"
-
 
 	return "Entry does not exist in this Calendar\n", 404
 
