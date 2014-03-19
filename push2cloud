@@ -3,4 +3,3 @@ git add .
 git commit -m "Added from Laptop"
 
 git push heroku master
-git push github master
