@@ -1,0 +1,6 @@
+#!/bin/bash
+curl -i -x POST -d '{}' http://localhost:5000/myCalendar/1
+
+curl -i -x POST -d '{}' http://localhost:5000/myCalendar/1
+
+curl -i -x POST -d '{}' http://localhost:5000/myCalendar/2

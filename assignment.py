@@ -9,17 +9,17 @@ cal_List = []
 def create_cal(cal_id):
 	for c in cal_List:
 		if c['ID'] == cal_id: 
-			return "Calendar already exists", 409
+			return "Calendar already exists\n", 409
 	newCal = {'ID':cal_id,'Entries':[]}
 	cal_List.append(newCal)
-	return "Calendar Created", 201
+	return "Calendar Created\n", 201
 
 @app.route('/myCalendar/<int:cal_id>', methods = ['GET'])
 def view_cal(cal_id):
 	for c in cal_List:
 		if c['ID'] == cal_id:
 			return jsonify(c)
-	return "Calendar does not exist.<br>\nPlease use POST to create.", 404	
+	return "Calendar does not exist.<br>\nPlease use POST to create.\n", 404	
 
 @app.errorhandler(404)
 def not_found(error):
@@ -33,9 +33,9 @@ def view_entry(cal_id,entry_id):
 				if e == {}:
 					c['Entries'].remove({})
 				elif e['ID'] == entry_id:
-					return jsonify(e)
+					return jsonify(e), 200
 	
-	return "No Entry found for this calendar.<br>\nPlease use POST to create.", 404
+	return "No Entry found for this calendar.<br>\nPlease use POST to create.\n", 404
 
 @app.route('/myCalendar/<int:cal_id>/Entry/<int:entry_id>',methods = ['POST'])
 def create_entry(cal_id,entry_id):
@@ -76,7 +76,7 @@ def delete_entry(cal_id,entry_id):
 			for e in c['Entries']:
 				if e['ID'] == entry_id:
 					e.clear()
-					return "Successfully deleted entry\n"
+					return "Successfully deleted entry\n", 200
 
 	return "Entry does not exist in this Calendar\n", 404
 

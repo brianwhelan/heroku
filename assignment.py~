@@ -33,9 +33,9 @@ def view_entry(cal_id,entry_id):
 				if e == {}:
 					c['Entries'].remove({})
 				elif e['ID'] == entry_id:
-					return jsonify(e)
+					return jsonify(e), 200
 	
-	return "No Entry found for this calendar<br>.\nPlease use POST to create.", 404
+	return "No Entry found for this calendar.<br>\nPlease use POST to create.", 404
 
 @app.route('/myCalendar/<int:cal_id>/Entry/<int:entry_id>',methods = ['POST'])
 def create_entry(cal_id,entry_id):
