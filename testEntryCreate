@@ -3,6 +3,6 @@ curl -i -X POST -d '{}' http://localhost:5000/myCalendar/1
 
 curl -i -X POST -d '{}' http://localhost:5000/myCalendar/2
 
-curl -i -X POST -d '{"title":"Test1"}' http://localhost:5000/myCalender/1/Entry/1
+curl -i -H "Content-Type: application/json" -X POST -d '{"title":"Test1"}' http://localhost:5000/myCalendar/1/Entry/1
 
-curl -i -X POST -d '{"title":"Test2"}' http://localhost:5000/myCalender/2/Entry/1
+curl -i -H "Content-Type: application/json" -X POST -d '{"title":"Test2"}' http://localhost:5000/myCalendar/2/Entry/1

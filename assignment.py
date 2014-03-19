@@ -66,16 +66,27 @@ def create_entry(cal_id,entry_id):
 
 	return "This Calendar ID does not exist\n", 404
 
+
+@app.route('/myCalendar/<int:cal_id>/Entry/<int:entry_id>',methods = ['PUT'])
+def edit_entry(cal_id,entry_id):
+	if not request.json or not 'ID' in request.json:
+		abort(400)
+	for c in cal_List:
+		if c['ID'] == cal_id:
+			for e in c['Entries']:
+				if e['ID'] == entry_id:
+					if 'title' in request.json:
+						e['title'] = request.json.get('title')
+	return "Entry Modified", 200				
+
 @app.route('/myCalendar/<int:cal_id>/Entry/<int:entry_id>',methods = ['DELETE'])
 def delete_entry(cal_id,entry_id):
-	if not request.json or not 'title' in request.json:
-		abort(400)
-	
 	for c in cal_List:
 		if c['ID'] == cal_id:
 			for e in c['Entries']:
 				if e['ID'] == entry_id:
 					e.clear()
+					c['Entries'].remove({})
 					return "Successfully deleted entry\n", 200
 
 	return "Entry does not exist in this Calendar\n", 404
